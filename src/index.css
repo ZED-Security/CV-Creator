@@ -1,0 +1,597 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.root {
+  width: 100%;
+  height: auto;
+  background: #003;
+  position: relative;
+  overflow: hidden;
+}
+
+.root::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #003;
+  border-bottom: rgba(255, 255, 255, 0.1) solid 1px;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: gold;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: gold;
+}
+
+.home {
+  padding: 50px 40px;
+}
+
+.home h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.home p {
+  color: #fff;
+  text-align: center;
+}
+
+
+/* Creator Page */
+.cv-creator {
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+  overflow: auto;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.cv-creator h2 {
+  color: #fff;
+  text-align: center;
+}
+
+.section {
+  margin-bottom: 25px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  background-color: #003;
+}
+
+.section h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 300px;
+  height: 300px;
+  max-height: 350px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.section.contact {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.section.contact input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.btn-contact {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.btn-contact button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-contact button:first-of-type {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-contact button:last-of-type {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-contact button:hover {
+  opacity: 0.9;
+}
+
+.section ul {
+  margin-top: 20px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.section ul li {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-left: 3px solid #0066cc;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  position: relative;
+}
+
+.section ul li pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.9em;
+}
+
+.section ul li button {
+  margin-right: 8px;
+  padding: 4px 10px;
+  font-size: 0.8em;
+  background-color: #666;
+}
+
+.section ul li button:hover {
+  background-color: #333;
+}
+
+.btn-reset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+.btn-reset button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #d60b08; /* Red-ish base color */
+  color: white;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-reset button:hover {
+  background-color: #240505; /* Darker red on hover */
+  color: #fff; /* Ensure text stays white */
+}
+
+
+/* Show */
+.cv-show {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+  overflow: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.cv-show h2 {
+  color: #fff;
+  text-align: center;
+}
+
+
+/* === Education Section === */
+.section.education {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  /* background-color: #f4f8ff; */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* Headings */
+.section.education h3 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+/* Inputs */
+.section.education input {
+  display: block;
+  width: 100%;
+  /* max-width: 500px; */
+  margin-bottom: 1rem;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* For date inputs side-by-side */
+.section.education .date-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Button group */
+.section.education .btn-contact {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Buttons */
+.section.education .btn-contact button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Individual button styles */
+.section.education .btn-contact button:nth-child(1) {
+  background-color: #28a745; /* Add Education */
+  color: white;
+}
+
+.section.education .btn-contact button:nth-child(2) {
+  background-color: #007bff; /* Save */
+  color: white;
+}
+
+.section.education .btn-contact button:nth-child(3) {
+  background-color: #dc3545; /* Clear */
+  color: white;
+}
+
+/* Hover effect */
+.section.education .btn-contact button:hover {
+  opacity: 0.9;
+}
+
+/* List styling */
+.section.education ul {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+.section.education ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* === Common Section Styling for Experience and Projects === */
+.section.experience,
+.section.projects {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  /* background-color: #fefefe; */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+.section.experience h3,
+.section.projects h3 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+/* Input fields and textarea */
+.section.experience input,
+.section.projects input,
+.section.experience textarea,
+.section.projects textarea {
+  display: block;
+  width: 100%;
+  /* max-width: 600px; */
+  margin-bottom: 1rem;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+/* Side-by-side date fields */
+.section.experience .date-row,
+.section.projects .date-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Button group */
+.section.experience .btn-contact,
+.section.projects .btn-contact {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Buttons */
+.section.experience .btn-contact button,
+.section.projects .btn-contact button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Button color codes */
+.section.experience .btn-contact button:nth-child(1),
+.section.projects .btn-contact button:nth-child(1) {
+  background-color: #28a745; /* Add */
+  color: white;
+}
+
+.section.experience .btn-contact button:nth-child(2),
+.section.projects .btn-contact button:nth-child(2) {
+  background-color: #007bff; /* Save */
+  color: white;
+}
+
+.section.experience .btn-contact button:nth-child(3),
+.section.projects .btn-contact button:nth-child(3) {
+  background-color: #dc3545; /* Clear */
+  color: white;
+}
+
+/* Hover effect */
+.section.experience .btn-contact button:hover,
+.section.projects .btn-contact button:hover {
+  opacity: 0.9;
+}
+
+/* List styling */
+.section.experience ul,
+.section.projects ul {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+.section.experience ul li,
+.section.projects ul li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+/* تنسيق عام للحاوية */
+.btn-show {
+  /* max-width: 800px; */
+  display: flex;
+  /* padding: 0px 20px; */
+  align-items: center;
+  gap: 15px; /* مسافة بين input والزر */
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* لجعلها تستجيب في الشاشات الصغيرة */
+}
+
+/* تنسيق حقل الإدخال */
+.btn-show input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1; /* يجعل الإدخال يتمدد ويأخذ المساحة المتبقية */
+  min-width: 200px;
+  font-size: 16px;
+}
+
+/* تنسيق الزر */
+.btn-show button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap; /* يمنع كسر النص داخل الزر */
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-show button:hover {
+  background-color: #0056b3;
+}
+
+.show {
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-preview {
+  background-color: white;
+  padding: 15px 30px;
+  font-family: Arial, sans-serif;
+  color: #000;
+}
+
+.p-fullname {
+  font-size: 34px;
+  margin-bottom: 6px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.p-contact {
+  text-align: center;
+  font-style: italic;
+  font-size: 15px;
+}
+
+.p-title {
+  border-bottom: 2px solid #000;
+  color: #000;
+  text-align: left;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.p-summary, .p-experience {
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 1em;
+  text-align: justify;
+  text-indent: 1.2em;
+}
+
+.p-exp {
+  font-style: italic;
+  font-size: 17px;
+  margin-bottom: 2px;
+}
+
+.p-edu {
+  font-style: italic;
+  font-size: 19px;
+  margin-bottom: 2px;
+}
+
+.p-education {
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+.p-pro {
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 1px;
+}
+
+.p-project {
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 1em;
+  text-align: justify;
+  text-indent: 1.2em;
+}
+
+.tech-skill, .soft-skill {
+  color: #000;
+}
+
+.cv-preview section {
+  margin-bottom: 20px;
+}
+
+.download-btn {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
