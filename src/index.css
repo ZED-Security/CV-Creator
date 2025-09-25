@@ -83,7 +83,9 @@ body {
 }
 
 .home {
-  padding: 50px 40px;
+  width: 100%;
+  height: 85vh;
+  /* padding: 50px 40px; */
 }
 
 .home h2 {
@@ -259,7 +261,7 @@ textarea {
 /* Show */
 .cv-show {
   max-width: 100%;
-  height: auto;
+  min-height: 85vh;
   margin: 0 auto;
   padding: 20px;
   overflow: auto;

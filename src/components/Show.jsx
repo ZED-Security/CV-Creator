@@ -48,39 +48,43 @@ export default function Show() {
 
       <div className="show">
         <div className="cv-preview" ref={componentRef}>
-          <p className="p-fullname">{cvData.personal?.name || "Full Name"}</p>
-          <p className="p-contact">
-            {[cvData.personal?.phone, cvData.personal?.email]
-              .filter(Boolean)
-              .join(" | ")}
+          {cvData.personal && (
+            <>
+              <p className="p-fullname">{cvData.personal?.name}</p>
+              <p className="p-contact">
+                {[cvData.personal?.phone, cvData.personal?.email]
+                  .filter(Boolean)
+                  .join(" | ")}
 
-            {cvData.personal?.github && (
-              <>
-                {" | "}
-                <a
-                  href={`https://github.com/${cvData.personal.github.replace(/^https?:\/\/(www\.)?github\.com\//, '')}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {cvData.personal?.github}
-                </a>
-              </>
-            )}
+                {cvData.personal?.github && (
+                  <>
+                    {" | "}
+                    <a
+                      href={`https://github.com/${cvData.personal.github.replace(/^https?:\/\/(www\.)?github\.com\//, '')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {cvData.personal?.github}
+                    </a>
+                  </>
+                )}
 
-            {cvData.personal?.linkedin && (
-              <>
-                {" | "}
-                <a
-                  href={`https://linkedin.com/in/${cvData.personal.linkedin.replace(/^https?:\/\/(www\.)?linkedin\.com\/in\//, '')}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {cvData.personal?.linkedin}
-                </a>
-              </>
-            )}
-          </p>
-          <hr />
+                {cvData.personal?.linkedin && (
+                  <>
+                    {" | "}
+                    <a
+                      href={`https://linkedin.com/in/${cvData.personal.linkedin.replace(/^https?:\/\/(www\.)?linkedin\.com\/in\//, '')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {cvData.personal?.linkedin}
+                    </a>
+                  </>
+                )}
+              </p>
+              <hr />
+            </>
+          )}
 
           {cvData.summary && (
             <>

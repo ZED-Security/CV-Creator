@@ -6,6 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import App from './App.jsx'
 import { CvProvider } from './context/cvContext.jsx';
 
+
 const root = createRoot(document.getElementById('root'))
 root.render(
   <StrictMode>
