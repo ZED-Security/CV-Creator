@@ -1,0 +1,9 @@
+{
+  "name": "cv-creator",
+  "private": true,
+  "version": "7.1.4",
+  "type": "module",
+  "scripts": {
+    "preview": "vite preview"
+  }
+}
